@@ -1,0 +1,54 @@
+h1. HMC6343
+
+	AUTHOR:		Nikolai Andre Ek Ovesen
+	EMAIL:		nikolai.ovesen@gmail.com
+	GIT:		https://github.com/n-ovesen/
+	Web:		http://nikolaiovesen.com
+
+h2. Summary
+
+Wrote a quick library to interface with the HMC6343 tilt compensated compass unit with an arduino,
+even though this is not a complicated unit to interface with this simplifies the job further.
+
+h2. Getting Started
+
+Hook it up to the i2c pins on your arduino (A4 and A5 or the dedicated pins on newer versions)
+
+If you are using a 5v arduino as most people you should also throw in a 5v - 3v logic level converter to make sure you don't get 150USD worth of blue smoke, unless that's your thing of course.
+
+h2. Software
+
+You need some way of compiling and uploading it to your arduino (DUH!)
+
+h2. Todo list:
+
+	- Make a function for calibration
+	- Make a function to set the orientation of the device (by default it should be placed flat)
+	- Make schematics to show how to wire the HMC6343 to the arduino
+
+h2. Found some bugs issues or some improvement?
+
+Please do not hesitate to send me an email with the problem and what sort of arduino you are using and what you did to create the bug/problem.
+
+And of course if you have some solution to something your solution will be marked with comments within the appropiate section of code :)
+
+h2. Licensing
+
+HMC6343 – A library to interface an i2c compatible arduino with the HMC6343
+Tilt compensated compass.
+Copyright © 2013 Nikolai Andre Ek Ovesen
+All rights reserved.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this library. If not, see <http://www.gnu.org/licenses/>.
+
