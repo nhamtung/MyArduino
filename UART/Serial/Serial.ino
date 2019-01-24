@@ -1,9 +1,14 @@
+
+
 void setup() {
   Serial.begin(115200);
-
+  Serial.println("Hello world");
 }
 
 void loop() {
-    Serial.println("Hello world");
-    delay(500);
+    while(Serial.available()>0)
+    {
+      Serial.print(Serial.read());
+      Serial.print(" ");
+    }
 }
