@@ -3,6 +3,9 @@
  * MEGA2560:
  * PIN 20,21 - SDA,SCL
  * 
+ * Arduino Uno:
+ * PIN A4,A5 - SDA,SCL
+ *
  * Arduino nano:
  * PIN A4,A5 - SDA,SCL
  */
@@ -18,12 +21,12 @@ void setup()
   pinMode(13,OUTPUT);
   digitalWrite(13,LOW);
 }
- 
+
 void loop()
 {
-    Wire.beginTransmission(0xA0); // Bắt đầu truyền dữ liệu về địa chỉ 0xA0
-    Wire.write('A'); // Truyền ký tự A (i2c)
-    Serial.println("A");
+    Wire.beginTransmission(0x31); // Bắt đầu truyền dữ liệu về địa chỉ 0xA0
+    Wire.write("A"); // Truyền ký tự A (i2c)
+    Serial.println("1");
     Wire.endTransmission(); // kết thúc truyền dữ liệu
     delay(1000);
     

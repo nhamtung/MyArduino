@@ -3,6 +3,9 @@
  * MEGA2560:
  * PIN 20,21 - SDA,SCL
  * 
+ * Arduino Uno:
+ * PIN A4,A5 - SDA,SCL
+ *
  * Arduino nano:
  * PIN A4,A5 - SDA,SCL
  */
@@ -11,7 +14,7 @@
 
 void setup()
 {
-  Wire.begin(0xA0);                // join i2c bus with address #4
+  Wire.begin(0x31);                // join i2c bus with address #4
   Wire.onReceive(receiveEvent); // register event
   Serial.begin(115200);           // start serial for output
   
@@ -28,7 +31,7 @@ void receiveEvent(int howMany)
   {
     char c = Wire.read(); // biến c để lưu dữ liệu nhận được
     
-    Serial.print(c);
+    Serial.println(c);
     
     if(c == 'A') // nếu boad chủ gửi về tín hiệu là A
     {
