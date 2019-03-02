@@ -9,6 +9,6 @@ void loop() {
     while(Serial.available()>0)
     {
       Serial.print(Serial.read());
-      Serial.print(" ");
+      Serial.println(" ");
     }
 }
