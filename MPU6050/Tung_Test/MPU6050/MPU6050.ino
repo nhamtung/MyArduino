@@ -1,6 +1,6 @@
 /*
  * MPU6050 Triple Axis Gyroscope & Accelerometer. Pitch & Roll & Yaw Gyroscope Example.
- * Arduino nano
+ * Tutorials: http://www.jarzebski.pl/arduino/czujniki-i-sensory/3-osiowy-zyroskop-i-akcelerometr-mpu6050.html
  */
 #include <Wire.h>
 #include "MPU6050.h"
@@ -44,8 +44,8 @@ void Read_MPU()
   Vector norm = mpu.readNormalizeGyro();  // Read normalized values
 
   // Calculate Pitch, Roll and Yaw
-  //pitch = pitch + norm.YAxis * timeStep;
-  //roll = roll + norm.XAxis * timeStep;
+  roll = roll + norm.XAxis * timeStep;
+  pitch = pitch + norm.YAxis * timeStep;
   yaw = yaw + norm.ZAxis * timeStep;    
   
 /*  if (pitch < 0)
@@ -55,8 +55,8 @@ void Read_MPU()
   else Angle = (unsigned int)(pitch*100);
   Serial.print("A");Serial.print((Angle));Serial.println("/");//*/
   
-  //Serial.print(" Pitch = ");Serial.print(pitch);  
-  //Serial.print(" Roll = ");Serial.print(roll);  
+  Serial.print(" Roll = ");Serial.print(roll);  
+  Serial.print(" Pitch = ");Serial.print(pitch);  
   Serial.print(" Yaw = ");Serial.println(yaw);
   
   delay((timeStep*1000) - (millis() - timer));  // Wait to full timeStep period//*/
