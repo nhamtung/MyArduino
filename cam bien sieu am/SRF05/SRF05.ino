@@ -11,8 +11,9 @@ void setup()
 void loop()
 {
   Serial.print(objectDistance_mm());
-  Serial.println("mm");
-  delay(100); 
+  Serial.println();
+  //Serial.println("mm");
+  delay(10); 
 }
 int objectDistance_mm()
 {
