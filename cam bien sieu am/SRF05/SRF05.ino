@@ -1,7 +1,7 @@
 //ARDUINO MEGA2560
 
-#define trig 10
-#define echo 11
+#define trig 3
+#define echo 4
 void setup()
 {
   pinMode(trig,OUTPUT);
@@ -13,7 +13,7 @@ void loop()
   Serial.print(objectDistance_mm());
   Serial.println();
   //Serial.println("mm");
-  delay(10); 
+  delay(100); 
 }
 int objectDistance_mm()
 {
